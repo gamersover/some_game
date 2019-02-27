@@ -137,7 +137,7 @@ class Ttype(Shape):
 
 
 class Itype(Shape):
-    """I 型, 没有中心怎么办
+    """I 型
     []                   [ ]
     []o    [][][o][]     [o]          o
     []                   [ ]     [][][][]
