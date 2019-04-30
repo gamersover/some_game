@@ -7,3 +7,6 @@
 > - python 3   
 > - pygame
 
+## 运行界面
+<img src="https://github.com/gamersover/some_game/blob/master/tv_game/assert/game_gui.gif">
+
