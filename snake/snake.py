@@ -20,9 +20,9 @@ class Snake:
         self.bodies.append(new_body)
 
     def add_action(self, new_action):
-        if self.length() > 1 and ((new_action == "上" and self.action_list[0] == "下") or \
-                (new_action == "下" and self.action_list[0] == "上") or \
-                (new_action == "左" and self.action_list[0] == "右") or \
+        if self.length() > 1 and ((new_action == "上" and self.action_list[0] == "下") or
+                (new_action == "下" and self.action_list[0] == "上") or
+                (new_action == "左" and self.action_list[0] == "右") or
                 (new_action == "右" and self.action_list[0] == "左")):
             new_action = self.action_list[0]
         self.action_list.insert(0, new_action)

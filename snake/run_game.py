@@ -4,6 +4,7 @@ from config import Config as cfg
 from game import Game
 
 
+# TODO: 分数变高，速度加快？
 def start(g):
     action = "右"
     while True:
@@ -19,8 +20,15 @@ def start(g):
                     action = "左"
                 if event.key == pygame.K_d:
                     action = "右"
+                if event.key == pygame.K_SPACE or event.key == pygame.K_p:
+                    if action != "pause":
+                        store_action = action
+                        action = "pause"
+                    else:
+                        action = store_action
 
-        g.game_run(action)
+        if action != "pause":
+            g.game_run(action)
         pygame.display.update()
 
 

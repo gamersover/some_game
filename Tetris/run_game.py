@@ -16,16 +16,20 @@ def run(g):
                 sys.exit()
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_UP:
-                   action = "上"
+                    action = "上"
                 if event.key == pygame.K_LEFT:
-                   action = "左"
+                    action = "左"
                 if event.key == pygame.K_RIGHT:
-                   action = "右"
+                    action = "右"
                 if event.key == pygame.K_DOWN:
-                   action = "下"
+                    action = "k_下"
+                if event.key == pygame.K_p or event.key == pygame.K_SPACE:
+                    action = "无" if action == "pause" else "pause"
 
-        g.game_run(action)
-        action = "无"
+        if action != "pause":
+            g.game_run(action)
+            action = "无"
+
         pygame.display.update()
 
 
