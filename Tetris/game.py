@@ -54,7 +54,7 @@ class Game:
                                 grid[1] * cfg.GRID_SIZE + cfg.GRID_SIZE // 2),
                                cfg.GRID_SIZE // 2, 0)
 
-    def drow_text(self):
+    def draw_text(self):
         self.screen.blit(self.next_font_fmt, (cfg.SCREEN_X+cfg.GRID_SIZE//2, 10))
         self.screen.blit(self.score_font_fmt, (cfg.SCREEN_X+cfg.GRID_SIZE//2, 150))
         self.screen.blit(self.score_num_fmt, (cfg.SCREEN_X+cfg.INFO_X//2, 170))
@@ -138,7 +138,7 @@ class Game:
     def draw_game(self):
         self.show_gui()
         self.draw_shape()
-        self.drow_text()
+        self.draw_text()
 
     def store_shape(self):
         return copy.deepcopy(self.curr_shape)
